@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DTN.Lightning.Alert.App", "src\DTN.Lightning.Alert.App.csproj", "{D352938C-6A65-47EF-B4D7-A1767FEDD1A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{431090B3-70C1-4A6E-82EB-B7F562516472}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DTN.Lightning.Alert.Test", "Tests\DTN.Lightning.Alert.Test\DTN.Lightning.Alert.Test.csproj", "{9488C288-EFEF-41DA-9BC3-79E9102ABCA5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D352938C-6A65-47EF-B4D7-A1767FEDD1A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D352938C-6A65-47EF-B4D7-A1767FEDD1A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D352938C-6A65-47EF-B4D7-A1767FEDD1A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D352938C-6A65-47EF-B4D7-A1767FEDD1A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9488C288-EFEF-41DA-9BC3-79E9102ABCA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9488C288-EFEF-41DA-9BC3-79E9102ABCA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9488C288-EFEF-41DA-9BC3-79E9102ABCA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9488C288-EFEF-41DA-9BC3-79E9102ABCA5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9488C288-EFEF-41DA-9BC3-79E9102ABCA5} = {431090B3-70C1-4A6E-82EB-B7F562516472}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29D698FE-2B75-4ADC-ADEF-7ED8D186C2B5}
+	EndGlobalSection
+EndGlobal
