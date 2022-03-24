@@ -12,5 +12,11 @@
 
             return quadKey;
         }
+
+        public static bool ValidLatLon(double latitude, double longitude) => LatIsValid(latitude) && LonIsValid(longitude);
+
+        private static bool LatIsValid(double latitude) => latitude >= -90 && latitude <= 90;
+
+        private static bool LonIsValid(double longitude) => longitude >= -180 && longitude <= 180;
     }
 }
