@@ -18,27 +18,15 @@ namespace DTN.Lightning.Alert.App
                 Console.WriteLine(assets.ErrorMessage);
             }
 
-            ReadLightningStrikes(assets);
+            var lightningStrikeFileService = new LightningStrikeFileService("./Data/lightning.json");
+            var alerts = lightningStrikeFileService.FindLightningStrikes(assets).Values;
+
+            foreach(var alert in alerts.Values)
+            {
+                Console.WriteLine($"lightning alert for {alert}");
+            }
 
             Console.ReadKey();
-        }
-
-        private static void ReadLightningStrikes(Asset asset, string path = "./Data/lightning.json")
-        {
-            foreach (string line in File.ReadLines(path))
-            {
-                var strike = JsonConvert.DeserializeObject<Strike>(line);
-
-                if (strike.FlashType == FlashType.HeartBeat) { continue; }
-
-                string quadKey = CoordinatesService.LatLonToQuadKey(strike.Latitude, strike.Longitude);
-
-                if (asset.Values.ContainsKey(quadKey))
-                {
-                    Console.WriteLine($"lightning alert for {asset.Values[quadKey]}");
-                    asset.Values.Remove(quadKey);
-                }
-            }
         }
     }
 }

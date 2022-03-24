@@ -24,6 +24,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Data\lightning_no_matches.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\assets_no_matches.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Data\heartbeat_strikes.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Data\no_assetName.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

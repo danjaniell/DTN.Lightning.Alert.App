@@ -17,14 +17,14 @@ namespace DTN.Lightning.Alert.App.Services
             _path = path;
         }
 
-        public Asset ReadAssets()
+        public JsonObjWrapper ReadAssets()
         {
             var assets = new Dictionary<object, object>();
             var errorMessages = new StringBuilder();
 
             if (!File.Exists(_path))
             {
-                return new Asset()
+                return new JsonObjWrapper()
                 {
                     Values = new(),
                     ErrorMessage = "Assets file not found."
@@ -35,7 +35,7 @@ namespace DTN.Lightning.Alert.App.Services
 
             if (string.IsNullOrWhiteSpace(json))
             {
-                return new Asset()
+                return new JsonObjWrapper()
                 {
                     Values = new(),
                     ErrorMessage = "Assets file is empty."
@@ -66,7 +66,7 @@ namespace DTN.Lightning.Alert.App.Services
                 assets.Add(location, $"{owner}:{name}");
             }
 
-            return new Asset()
+            return new JsonObjWrapper()
             {
                 Values = assets,
                 ErrorMessage = errorMessages.ToString()
