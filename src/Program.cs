@@ -19,9 +19,14 @@ namespace DTN.Lightning.Alert.App
             }
 
             var lightningStrikeFileService = new LightningStrikeFileService(args[1]);
-            var alerts = lightningStrikeFileService.FindLightningStrikes(assets).Values;
+            var alerts = lightningStrikeFileService.FindLightningStrikes(assets);
 
-            foreach(var alert in alerts.Values)
+            if (alerts.HasError)
+            {
+                Console.WriteLine(alerts.ErrorMessage);
+            }
+
+            foreach(var alert in alerts.Values.Values)
             {
                 Console.WriteLine($"lightning alert for {alert}");
             }
