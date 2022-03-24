@@ -24,6 +24,12 @@ namespace DTN.Lightning.Alert.Test
         }
 
         [Fact]
+        public void DuplicateQuadKey_PrintInfo()
+        {
+
+        }
+
+        [Fact]
         public void AssetOwnerNotFound_PrintInfo()
         {
 
