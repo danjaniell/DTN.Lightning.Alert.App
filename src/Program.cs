@@ -10,7 +10,7 @@ namespace DTN.Lightning.Alert.App
     {
         static void Main(string[] args)
         {
-            var assetsFileService = new AssetsFileService("./Data/assets.json");
+            var assetsFileService = new AssetsFileService(args[0]);
             var assets = assetsFileService.ReadAssets();
 
             if (assets.HasError)
@@ -18,7 +18,7 @@ namespace DTN.Lightning.Alert.App
                 Console.WriteLine(assets.ErrorMessage);
             }
 
-            var lightningStrikeFileService = new LightningStrikeFileService("./Data/lightning.json");
+            var lightningStrikeFileService = new LightningStrikeFileService(args[1]);
             var alerts = lightningStrikeFileService.FindLightningStrikes(assets).Values;
 
             foreach(var alert in alerts.Values)
