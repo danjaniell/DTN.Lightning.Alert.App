@@ -33,7 +33,7 @@
     <None Update="Data\assets_with_duplicate.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Data\empty_assets.json">
+    <None Update="Data\empty_file.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Data\no_quadKey.json">

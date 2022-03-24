@@ -9,7 +9,7 @@ namespace DTN.Lightning.Alert.Test
         [Fact]
         public void FileIsEmpty_PrintInfo()
         {
-            var assetsFileService = new AssetsFileService("./Data/empty_assets.json");
+            var assetsFileService = new AssetsFileService("./Data/empty_file.json");
 
             var result = assetsFileService.ReadAssets();
 
